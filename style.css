@@ -1,0 +1,57 @@
+:root {
+  --brand: #80d0b8;
+  --brand-accent: #609c8a;
+  --brand-muted: #467265;
+  --ink: #223;
+  --bg: var(--brand);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap');
+
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body {
+  font-family: "League Spartan", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+header, footer {
+  background: white;
+  padding: 16px;
+}
+
+.brand-bar {
+  background: var(--brand-accent);
+  height: 6px;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  background: white;
+  padding: 24px 20px;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1, h2, h3 { letter-spacing: .02em; }
+h1 { font-size: 2rem; margin: 0 0 .25rem; }
+h2 { font-size: 1.4rem; margin-top: 1.25rem; }
+h3 { font-size: 1.1rem; margin-top: 1rem; }
+
+.tagline { color: var(--brand-accent); font-size: 1.05rem; }
+.logo { width: 88px; height: auto; }
+
+.grid { display: grid; gap: 24px; grid-template-columns: 1fr 1fr; }
+@media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+
+img.service { max-width: 100%; height: auto; border: 2px solid var(--brand-muted); border-radius: 6px; }
+
+.note { color: var(--brand-accent); text-decoration: underline; }
+
+footer small { color: #556; }
+
+.badge { display:inline-block; padding: .15rem .5rem; border: 1px solid var(--brand-accent); border-radius: 999px; font-size: .85rem; }
